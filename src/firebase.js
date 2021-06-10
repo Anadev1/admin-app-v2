@@ -10,6 +10,6 @@ const firebaseApp = firebase.initializeApp({
 });
 
 
-const db = firebaseApp.firestore();
+// const db = firebaseApp.firestore();
 
-export { db };
+export default firebaseApp;

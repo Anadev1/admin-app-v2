@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {NavLink } from "react-router-dom";
-import { db } from '../firebase';
+import firebaseApp from '../firebase';
 import Navigation from './Navigation';
 import MainCta from './MainCta';
 import exitIcon from '../assets/images/exit_icon.svg';
@@ -13,7 +13,7 @@ const AddUser = () => {
 
      const onSubmit = e => {
           e.preventDefault()
-          db
+          firebaseApp.firestore()
                .collection('users')
                .add({
                     name,

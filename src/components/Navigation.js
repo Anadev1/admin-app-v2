@@ -6,10 +6,25 @@ import usersIcon from '../assets/images/users_icon.svg';
 import jobsIcon from '../assets/images/jobs_icon.svg';
 import settingsIcon from '../assets/images/settings_icon.svg';
 import logoutIcon from '../assets/images/logout_icon.svg';
+import firebaseApp from '../firebase';
 
 
-class Navigation extends React.Component {
-     render() {
+const Navigation = () =>  {
+
+     const signOut = async (event) => {
+     event.preventDefault();
+
+          try {
+               await firebaseApp.auth().signOut();
+               alert("Successfully signed out!");
+               
+          }  catch (error) {
+               console.log("error", error);
+               alert(error.message);
+          }
+     }  
+
+     
           return (
                <div className="navigation">
                     <div className="navigation__header">
@@ -45,16 +60,15 @@ class Navigation extends React.Component {
                                    <p className="navlink__name">Settings</p>
                               </div>      
                          </NavLink>
-                         <NavLink to="/login" className="navlink navlink__navigation" activeClassName="is-active">
+                         <NavLink to="/signinform" className="navlink navlink__navigation" activeClassName="is-active">
                               <div className="navlink__container">
                                    <img src={logoutIcon} className="navlink__icon"></img>
-                                   <p className="navlink__name">Log out</p>
+                                   <p className="navlink__name" onClick={() => signOut()}>Log out</p>
                               </div>  
                          </NavLink>
                     </div>
                </div>
-          )
-     }
+          );
 }
 
 export default Navigation;

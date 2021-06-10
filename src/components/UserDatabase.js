@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {NavLink } from "react-router-dom";
-import { db } from '../firebase';
+import firebaseApp from '../firebase';
 import Navigation from './Navigation';
 import MainCta from './MainCta';
 import User from './Users';
@@ -9,7 +9,7 @@ const UserDatabase = () => {
 
      const handleOnDelete = id => {
      
-     db
+     firebaseApp.firestore()
           .collection("users")
           .doc(id)
           .delete();
@@ -18,7 +18,7 @@ const UserDatabase = () => {
      const [users, setUsers] = useState([])
      const usersName = [];
      useEffect(() => {
-     const unsubscribe = db
+     const unsubscribe = firebaseApp.firestore()
           .collection("users") 
           .onSnapshot(snapshot => {
           const listUsers = snapshot.docs.map(doc => ({
