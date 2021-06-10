@@ -1,0 +1,60 @@
+.database-container {
+     width: 100%;
+}
+
+.user {
+     background: #f8f8f8;
+     display: flex;
+     padding: 0 15rem;
+     margin-bottom: .5rem;
+}
+
+.user__details-container {
+     width: 33.3%;
+}
+
+.user__name {
+     font-size: 2rem;
+     font-weight: normal;
+}
+
+.user__role--admin {
+     color: #5DC090;
+}
+
+.user__role--member {
+     color: #1C47BD;
+}
+
+.user__email {
+     font-size: 1.6rem;
+     font-weight: lighter;
+}
+
+.user__role-container {
+     width: 33.3%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.user__actions-container {
+     width: 33.3%;
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+}
+
+.user__reset-password {
+     margin-right: 5rem;
+     font-size: 1.8rem;
+     border: none;
+     background: transparent;
+     cursor: pointer;
+}
+
+.user__delete {
+     border: none;
+     background: transparent;
+     cursor: pointer;
+}

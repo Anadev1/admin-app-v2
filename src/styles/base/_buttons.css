@@ -1,0 +1,20 @@
+.main-cta {
+     border-style: none;
+     border-radius: .5rem;
+     background: var(--cta);
+     color: white;
+     width: 15rem;
+     height: 3rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.main-cta:hover {
+     cursor: pointer;
+}
+
+.main-cta__plus-icon {
+     width: 1.5rem;
+     margin-right: 1rem;
+}

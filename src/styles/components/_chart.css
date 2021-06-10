@@ -1,0 +1,33 @@
+.charts-container {
+     margin: 5rem 15rem;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+}
+
+.chart {
+     width: 45%;
+     margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 1440px) {
+     .chart {
+          width: 50%;
+     }
+
+     .charts-container {
+          margin: 5rem 10rem;
+     }
+}
+
+@media only screen and (max-width: 1200px) {
+     .charts-container {
+          margin: 5rem 5rem;
+     }
+}
+
+@media only screen and (max-width: 1024px) {
+     .charts-container {
+          margin: 5rem 3rem;
+     }
+}
