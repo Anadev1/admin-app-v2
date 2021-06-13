@@ -32,7 +32,6 @@ const UserDatabase = () => {
      return () => unsubscribe()
      }, [])
      
-     
      return (
     <div className="content">
           
@@ -55,5 +54,3 @@ const UserDatabase = () => {
 }
 
 export default UserDatabase;
-
-

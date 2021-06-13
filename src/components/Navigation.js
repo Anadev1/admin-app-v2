@@ -1,28 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
+import { useAuth } from "../contexts/AuthContext";
+import { Link, useHistory } from "react-router-dom";
 import logo from '../assets/images/logo_white.svg';
 import dashboardIcon from '../assets/images/dashboard_icon.svg';
 import usersIcon from '../assets/images/users_icon.svg';
 import jobsIcon from '../assets/images/jobs_icon.svg';
 import settingsIcon from '../assets/images/settings_icon.svg';
 import logoutIcon from '../assets/images/logout_icon.svg';
-import firebaseApp from '../firebase';
 
 
 const Navigation = () =>  {
 
-     const signOut = async (event) => {
-     event.preventDefault();
+     const [error, setError] = useState("")
+     const { currentUser, logout } = useAuth()
+     const history = useHistory()
 
-          try {
-               await firebaseApp.auth().signOut();
-               alert("Successfully signed out!");
-               
-          }  catch (error) {
-               console.log("error", error);
-               alert(error.message);
-          }
-     }  
+     async function handleLogout() {
+     setError("")
+
+     try {
+          await logout()
+          history.push("/login")
+     } catch {
+          setError("Failed to log out")
+     }
+     }
 
      
           return (
@@ -32,7 +35,7 @@ const Navigation = () =>  {
                     </div>
                     
                     <div className="navigation__menu">
-                         <NavLink to="/admin-app" className="navlink navlink__navigation" activeClassName="is-active" exact={true}>
+                         <NavLink to="/" className="navlink navlink__navigation" activeClassName="is-active" exact={true}>
                               <div className="navlink__container">
                                    <img src={dashboardIcon} className="navlink__icon"></img>
                                    <p className="navlink__name">Dashboard</p>
@@ -60,10 +63,10 @@ const Navigation = () =>  {
                                    <p className="navlink__name">Settings</p>
                               </div>      
                          </NavLink>
-                         <NavLink to="/signinform" className="navlink navlink__navigation" activeClassName="is-active">
+                         <NavLink to="/login" className="navlink navlink__navigation" activeClassName="is-active">
                               <div className="navlink__container">
                                    <img src={logoutIcon} className="navlink__icon"></img>
-                                   <p className="navlink__name" onClick={() => signOut()}>Log out</p>
+                                   <p className="navlink__name" onClick={handleLogout}>Log out</p>
                               </div>  
                          </NavLink>
                     </div>

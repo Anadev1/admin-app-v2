@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {NavLink } from "react-router-dom";
+import {NavLink, useHistory } from "react-router-dom";
 import firebaseApp from '../firebase';
 import Navigation from './Navigation';
 import MainCta from './MainCta';
@@ -10,6 +10,7 @@ const AddUser = () => {
      const [name, setName] = useState('');
      const [email, setEmail] = useState('');
      const [role, setRole] = useState('');
+     const history = useHistory()
 
      const onSubmit = e => {
           e.preventDefault()
@@ -20,7 +21,9 @@ const AddUser = () => {
                     email,
                     role,
                })
-          .then(() => setName(''), setEmail(''), setRole(''))
+               .then(() => setName(''), setEmail(''), setRole(''));
+               
+          history.push("/userdatabase");
      }
 
      return (
@@ -41,8 +44,12 @@ const AddUser = () => {
                                    onChange={e => setName(e.currentTarget.value)} type="text" />
                               <input className="adduser__input" placeholder="Email" value={email} name="email"
                                    onChange={e => setEmail(e.currentTarget.value)} type="text" />
-                              <input className="adduser__input" placeholder="Role" value={role} name="role"
-                                   onChange={e => setRole(e.currentTarget.value)} type="text" />
+                              <select className="adduser__input" value={role} name="role"
+                                   onChange={e => setRole(e.currentTarget.value)}>
+                                   <option value="" disabled selected>Select role</option>
+                                   <option value="Member">Member</option>
+                                   <option value="Admin">Admin</option>
+                              </select>
                               <MainCta title="Create User" className="adduser__button" />
                          </form>
                     </div>          

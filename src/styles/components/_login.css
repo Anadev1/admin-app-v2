@@ -17,12 +17,33 @@
      margin-top: 3rem;
 }
 
+.login__account-text {
+     text-align: center;
+     margin-top: 7rem;
+}
+
+.login__account-link {
+     text-decoration: none;
+     color: var(--primary);
+}
+
 .login__form-container {
      display: flex;
      flex-direction: column;
      margin: 0 auto;
      width: 30%;
      height: 65%;
+     padding: 4rem 10rem;
+     background: #fff;
+     border-radius: 1rem;
+}
+
+.signup__form-container {
+     display: flex;
+     flex-direction: column;
+     margin: 0 auto;
+     width: 30%;
+     height: 75%;
      padding: 4rem 10rem;
      background: #fff;
      border-radius: 1rem;
