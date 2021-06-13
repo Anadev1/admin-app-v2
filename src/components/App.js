@@ -14,7 +14,6 @@ import PrivateRoute from "./PrivateRoute"
 function App() {
   return (
     
-      
         <Router>
           <AuthProvider>
             <Switch>
@@ -22,9 +21,9 @@ function App() {
          
                 <Route path="/signup" component={Signup} />
                 <Route path="/login" component={Login} />
-                <Route path="/userdatabase" component={UserDatabase} />
-                <Route path="/adduser" component={AddUser} />
-                <Route component={NotFoundPage} />
+                <PrivateRoute path="/userdatabase" component={UserDatabase} />
+                <PrivateRoute path="/adduser" component={AddUser} />
+                <PrivateRoute component={NotFoundPage} />
          
             </Switch>
           </AuthProvider>
