@@ -23,6 +23,10 @@
      font-size: 2.4rem;
 }
 
+.adduser__input-dropdown {
+     width: 54%;
+}
+
 .adduser__button {
      margin-top: 5rem;
      width: 20rem;

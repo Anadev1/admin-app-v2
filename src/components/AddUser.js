@@ -43,9 +43,9 @@ const AddUser = () => {
                               <input className="adduser__input" placeholder="Name" value={name} name="name"
                                    onChange={e => setName(e.currentTarget.value)} type="text" />
                               <input className="adduser__input" placeholder="Email" value={email} name="email"
-                                   onChange={e => setEmail(e.currentTarget.value)} type="text" />
-                              <select className="adduser__input" value={role} name="role"
-                                   onChange={e => setRole(e.currentTarget.value)}>
+                                   onChange={e => setEmail(e.currentTarget.value)} type="email" />
+                              <select className="adduser__input adduser__input-dropdown" value={role} name="role"
+                                   onChange={e => setRole(e.currentTarget.value)} required>
                                    <option value="" disabled selected>Select role</option>
                                    <option value="Member">Member</option>
                                    <option value="Admin">Admin</option>
