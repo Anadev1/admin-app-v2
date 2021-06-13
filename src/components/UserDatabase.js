@@ -4,6 +4,7 @@ import firebaseApp from '../firebase';
 import Navigation from './Navigation';
 import MainCta from './MainCta';
 import User from './Users';
+import searchIcon from '../assets/images/search_icon.svg';
 
 const UserDatabase = () => {
 
@@ -44,28 +45,32 @@ const UserDatabase = () => {
      );
      }, [search, users]);
      
-     
      return (
     <div className="content">
           
           <Navigation />
             <div className="main-container">
-                 <div className="page-header">
-                      <h1 className="page-title">Users</h1>
+               <div className="page-header">
+                    <div className="database-headline">
+                         <h1 className="page-title">Users</h1>
                          <NavLink to="/adduser" className="navlink"><MainCta title="Create User" /></NavLink>
+                    </div>
+                    <div className="searchbar-container">
+                         
                          <input
+                              className="searchbar"
                               type="text"
-                              placeholder="Search Users"
+                              placeholder="Search..."
                               onChange={(e) => setSearch(e.target.value)}
                          />
-                         
-                 </div>
+                    </div>
+               </div>
 
-                 <div className="database-container">
-                    {filteredUsers.map((user, id) => (
-                         <User key={id} {...user} user={user} clickHandler={handleOnDelete} />
-                    ))}
-                 </div>          
+               <div className="database-container">
+               {filteredUsers.map((user, id) => (
+                    <User key={id} user={user} clickHandler={handleOnDelete} />
+               ))}
+               </div>          
           </div>
           
     </div>

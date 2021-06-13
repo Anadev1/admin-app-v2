@@ -29,6 +29,7 @@ body {
 .page-header {
      display: flex;
      align-items: center;
+     justify-content: space-between;
      padding-top: 5rem;
      padding-left: 15rem;
 }
