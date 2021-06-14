@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/admin-app-v2/static/css/main.e5e6fb11.chunk.css",
+    "main.js": "/admin-app-v2/static/js/main.ab06ad4e.chunk.js",
+    "main.js.map": "/admin-app-v2/static/js/main.ab06ad4e.chunk.js.map",
+    "runtime-main.js": "/admin-app-v2/static/js/runtime-main.01fc8821.js",
+    "runtime-main.js.map": "/admin-app-v2/static/js/runtime-main.01fc8821.js.map",
+    "static/css/2.679831fc.chunk.css": "/admin-app-v2/static/css/2.679831fc.chunk.css",
+    "static/js/2.fabf9c53.chunk.js": "/admin-app-v2/static/js/2.fabf9c53.chunk.js",
+    "static/js/2.fabf9c53.chunk.js.map": "/admin-app-v2/static/js/2.fabf9c53.chunk.js.map",
+    "index.html": "/admin-app-v2/index.html",
+    "static/css/2.679831fc.chunk.css.map": "/admin-app-v2/static/css/2.679831fc.chunk.css.map",
+    "static/css/main.e5e6fb11.chunk.css.map": "/admin-app-v2/static/css/main.e5e6fb11.chunk.css.map",
+    "static/js/2.fabf9c53.chunk.js.LICENSE.txt": "/admin-app-v2/static/js/2.fabf9c53.chunk.js.LICENSE.txt",
+    "static/media/dashboard_icon.5c7263cf.svg": "/admin-app-v2/static/media/dashboard_icon.5c7263cf.svg",
+    "static/media/delete_icon.6d344417.svg": "/admin-app-v2/static/media/delete_icon.6d344417.svg",
+    "static/media/exit_icon.d1b98f1a.svg": "/admin-app-v2/static/media/exit_icon.d1b98f1a.svg",
+    "static/media/jobs_icon.98db3a90.svg": "/admin-app-v2/static/media/jobs_icon.98db3a90.svg",
+    "static/media/logo_blue.6a1ebfab.svg": "/admin-app-v2/static/media/logo_blue.6a1ebfab.svg",
+    "static/media/logo_white.25b6a9ba.svg": "/admin-app-v2/static/media/logo_white.25b6a9ba.svg",
+    "static/media/logout_icon.1b3e7c6a.svg": "/admin-app-v2/static/media/logout_icon.1b3e7c6a.svg",
+    "static/media/plus_icon.2cb5970e.svg": "/admin-app-v2/static/media/plus_icon.2cb5970e.svg",
+    "static/media/styles.css": "/admin-app-v2/static/media/search_icon.d07e0bc3.svg",
+    "static/media/settings_icon.28b08c56.svg": "/admin-app-v2/static/media/settings_icon.28b08c56.svg",
+    "static/media/users_icon.b506a690.svg": "/admin-app-v2/static/media/users_icon.b506a690.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.01fc8821.js",
+    "static/css/2.679831fc.chunk.css",
+    "static/js/2.fabf9c53.chunk.js",
+    "static/css/main.e5e6fb11.chunk.css",
+    "static/js/main.ab06ad4e.chunk.js"
+  ]
+}
