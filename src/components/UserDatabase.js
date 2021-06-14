@@ -4,16 +4,15 @@ import firebaseApp from '../firebase';
 import Navigation from './Navigation';
 import MainCta from './MainCta';
 import User from './Users';
-import searchIcon from '../assets/images/search_icon.svg';
 
 const UserDatabase = () => {
 
      const handleOnDelete = id => {
      
-     firebaseApp.firestore()
-          .collection("users")
-          .doc(id)
-          .delete();
+          firebaseApp.firestore()
+               .collection("users")
+               .doc(id)
+               .delete();
      };
 
      const [users, setUsers] = useState([])
@@ -38,12 +37,13 @@ const UserDatabase = () => {
      const [filteredUsers, setFilteredUsers] = useState([]);
 
      useEffect(() => {
-     setFilteredUsers(
-      users.filter((user) =>
-          user.name.toLowerCase().includes(search.toLowerCase())
-      )
-     );
+          setFilteredUsers(
+               users.filter((user) =>
+                    user.name.toLowerCase().includes(search.toLowerCase())
+               )
+          );
      }, [search, users]);
+
      
      return (
     <div className="content">

@@ -11,8 +11,8 @@
 
 .user:hover {
      background: #f3f3f3;
-     border-top: 0.1rem solid #000000;
-     border-bottom: 0.1rem solid #000000;
+     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
      cursor: pointer;
 }
 

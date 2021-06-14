@@ -1,12 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import deleteIcon from '../assets/images/delete_icon.svg';
 
 const User = (props) => {
 
      const [visibility, setVisibility] = useState('none');
-     const emailRef = useRef();
-     const nameRef = useRef();
-     const roleRef = useRef();
 
      const buttonsStyle = {
           display: `${visibility}`,
